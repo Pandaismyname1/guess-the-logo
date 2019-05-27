@@ -75,6 +75,7 @@ public class PlayActivity extends AppCompatActivity {
         imageView.setImageResource(game.GetCurrentImage());
         Intent intent = new Intent(this, AddScoreActivity.class);
         intent.putExtra(MainActivity.EXTRA_CURRENT_SCORE, game.GetCorrectGuesses());
+        intent.putExtra(MainActivity.EXTRA_SET, setString);
         startActivity(intent);
         game.StartGame();
     }
