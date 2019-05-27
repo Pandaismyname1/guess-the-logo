@@ -4,5 +4,9 @@
     <string name="title_activity_play">Play</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="guess">Guess</string>
+    <string name="guess_text">Guess</string>
+    <string name="guess_button">Try</string>
+    <string name="abandon_button">Abandon</string>
+    <string name="current_guesses">Current Guesses: %d</string>
+    <string name="tries_remaining">Tries Remaining: %d</string>
 </resources>
