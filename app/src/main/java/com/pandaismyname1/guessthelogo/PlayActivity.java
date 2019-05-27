@@ -61,7 +61,6 @@ public class PlayActivity extends AppCompatActivity {
         game.Guess(logo_guess.getText().toString());
 
         if (game.GetTriesLeft() <= 0) {
-            game.StartGame();
             onClickAbandon(v);
         }
 
