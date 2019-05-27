@@ -1,7 +1,7 @@
 package com.pandaismyname1.guessthelogo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class HighScoresActivity extends AppCompatActivity {
 

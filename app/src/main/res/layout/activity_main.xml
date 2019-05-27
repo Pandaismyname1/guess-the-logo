@@ -13,7 +13,7 @@
         android:layout_marginStart="75dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="75dp"
-        android:text="Guess The Logo"
+        android:text="@string/guess_the_logo"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="16dp"
-        android:text="Exit"
+        android:text="@string/exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,7 +40,7 @@
         android:layout_marginTop="152dp"
         android:layout_marginEnd="20dp"
         android:onClick="onClickScores"
-        android:text="High Scores"
+        android:text="@string/high_scores"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
         android:layout_marginTop="92dp"
         android:layout_marginEnd="20dp"
         android:onClick="onClickCars"
-        android:text="Play Cars"
+        android:text="@string/play_cars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,9 +68,44 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="20dp"
         android:onClick="onClickStandard"
-        android:text="Play Standard"
+        android:text="@string/play_standard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/difficulty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="16dp"
+        android:checkedButton="@id/radioButton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/easy" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/medium" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hard" />
+    </RadioGroup>
 </android.support.constraint.ConstraintLayout>

@@ -1,15 +1,14 @@
 package com.pandaismyname1.guessthelogo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pandaismyname1.guessthelogo.logic.Game;
-import com.pandaismyname1.guessthelogo.models.LogoSet;
 import com.pandaismyname1.guessthelogo.models.PlayableSet;
 
 public class PlayActivity extends AppCompatActivity {
@@ -58,11 +57,10 @@ public class PlayActivity extends AppCompatActivity {
         imageView.setImageResource(game.GetCurrentImage());
     }
 
-    public void onClickGuess(View v)
-    {
+    public void onClickGuess(View v) {
         game.Guess(logo_guess.getText().toString());
 
-        if(game.GetTriesLeft() <= 0) {
+        if (game.GetTriesLeft() <= 0) {
             game.StartGame();
             onClickAbandon(v);
         }
@@ -73,8 +71,7 @@ public class PlayActivity extends AppCompatActivity {
         logo_guess.setText("");
     }
 
-    public void onClickAbandon(View v)
-    {
+    public void onClickAbandon(View v) {
         imageView.setImageResource(game.GetCurrentImage());
         Intent intent = new Intent(this, AddScoreActivity.class);
         intent.putExtra(MainActivity.EXTRA_CURRENT_SCORE, game.GetCorrectGuesses());

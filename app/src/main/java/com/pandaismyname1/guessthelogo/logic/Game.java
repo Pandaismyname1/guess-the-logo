@@ -21,9 +21,9 @@ public class Game {
     }
 
     public void StartGame() {
-        if(difficulty == 1) {
+        if (difficulty == 1) {
             triesLeft = 5;
-        } else if(difficulty == 2) {
+        } else if (difficulty == 2) {
             triesLeft = 3;
         } else {
             triesLeft = 1;
@@ -36,20 +36,20 @@ public class Game {
     }
 
     public void Guess(String guess) {
-        if(difficulty == 1) {
-            if(currentLogo.Answer.replace(" ","").toLowerCase().equals(guess.replace(" ","").toLowerCase())) {
+        if (difficulty == 1) {
+            if (currentLogo.Answer.replace(" ", "").toLowerCase().equals(guess.replace(" ", "").toLowerCase())) {
                 CorrectGuess();
             } else {
                 WrongGuess();
             }
-        } else if(difficulty == 2) {
-            if(currentLogo.Answer.replace(" ","").equals(guess.replace(" ",""))) {
+        } else if (difficulty == 2) {
+            if (currentLogo.Answer.replace(" ", "").equals(guess.replace(" ", ""))) {
                 CorrectGuess();
             } else {
                 WrongGuess();
             }
         } else {
-            if(currentLogo.Answer.equals(guess)) {
+            if (currentLogo.Answer.equals(guess)) {
                 CorrectGuess();
             } else {
                 WrongGuess();
@@ -60,7 +60,7 @@ public class Game {
     private void CorrectGuess() {
         correctGuesses++;
         currentIndex++;
-        if(currentIndex > logoSet.LastIndex()) {
+        if (currentIndex > logoSet.LastIndex()) {
             currentIndex = 0;
             logoSet.ScrambleSet();
         }
@@ -70,7 +70,7 @@ public class Game {
     private void WrongGuess() {
         triesLeft--;
         currentIndex++;
-        if(currentIndex > logoSet.LastIndex()) {
+        if (currentIndex > logoSet.LastIndex()) {
             currentIndex = 0;
             logoSet.ScrambleSet();
         }

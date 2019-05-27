@@ -9,4 +9,16 @@
     <string name="abandon_button">Abandon</string>
     <string name="current_guesses">Correct Guesses: %d</string>
     <string name="tries_remaining">Tries Remaining: %d</string>
+    <string name="share">Share</string>
+    <string name="add_to_highscores">Add To Highscores</string>
+    <string name="name">Name</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">hard</string>
+    <string name="play_standard">Play Standard</string>
+    <string name="play_cars">Play Cars</string>
+    <string name="high_scores">Standard High Scores</string>
+    <string name="cars_high_scores">Cars High Scores</string>
+    <string name="exit">Exit</string>
+    <string name="guess_the_logo">Guess The Logo</string>
 </resources>
