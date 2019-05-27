@@ -33,7 +33,8 @@ public class AddScoreActivity extends AppCompatActivity {
         SharedPreferences prefs = this.getSharedPreferences("highscores", Context.MODE_PRIVATE);
         String hsJSONStr = prefs.getString("highscores", null);
         String result = "";
-        JSONObject root;JSONArray jsonSet;
+        JSONObject root;
+        JSONArray jsonSet;
         try {
             JSONObject newScore = new JSONObject();
             newScore.put("name", name_edit_text.getText().toString());
@@ -43,9 +44,9 @@ public class AddScoreActivity extends AppCompatActivity {
             } else {
                 root = new JSONObject();
                 jsonSet = new JSONArray();
-                root.put("All",jsonSet);
+                root.put("All", jsonSet);
                 jsonSet = new JSONArray();
-                root.put("Cars",jsonSet);
+                root.put("Cars", jsonSet);
             }
             jsonSet = root.getJSONArray(set);
             jsonSet.put(newScore);
@@ -54,7 +55,7 @@ public class AddScoreActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         System.out.println(result);
-        prefs.edit().putString("highscores", result).commit();
+        prefs.edit().putString("highscores", result).apply();
 
         Intent intent = new Intent(this, HighScoresActivity.class);
         intent.putExtra(MainActivity.EXTRA_SET, set);

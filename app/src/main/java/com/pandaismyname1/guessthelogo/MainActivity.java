@@ -63,9 +63,14 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_SET, "All");
         startActivity(intent);
     }
+
     public void onClickCarScores(View v) {
         Intent intent = new Intent(this, HighScoresActivity.class);
         intent.putExtra(EXTRA_SET, "Cars");
         startActivity(intent);
+    }
+
+    public void onExit(View v) {
+        finish();
     }
 }
