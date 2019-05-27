@@ -28,6 +28,7 @@ public class Game {
         } else {
             triesLeft = 1;
         }
+        correctGuesses = 0;
 
         logoSet.ScrambleSet();
         currentIndex = 0;

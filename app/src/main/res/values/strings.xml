@@ -7,6 +7,6 @@
     <string name="guess_text">Guess</string>
     <string name="guess_button">Try</string>
     <string name="abandon_button">Abandon</string>
-    <string name="current_guesses">Current Guesses: %d</string>
+    <string name="current_guesses">Correct Guesses: %d</string>
     <string name="tries_remaining">Tries Remaining: %d</string>
 </resources>
